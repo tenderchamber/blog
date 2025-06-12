@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@400;500&display=swap');
+
+:root {
+    --width: 720px;
+    --font-main: Inter, sans-serif;
+    --font-secondary: Source Serif 4, serif;
+    --font-scale: 1.125em;
+    --background-color: #fff;
+    --heading-color: #8F748C;
+    --text-color: #333;
+    --link-color: #7A5D7F;
+    --visited-color:  #A382A3;
+    --code-background-color: #F7F4F8;
+    --code-color: #222;
+    --blockquote-color: #555;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #181414;
+    --heading-color: #f1cfd2;
+    --text-color: #eae6e3;
+    --link-color: #d1b3c4;
+    --visited-color: #b295ab;
+    --code-background-color: #2a2222;
+    --code-color: #eae6e3;
+    --blockquote-color: #a68894;
+    }
+}
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    font-weight: 400;
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: justify;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+h1 { font-size: 1.75em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 1.125em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.9em; }
+
+a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+a:hover {
+    color: var(--heading-color);
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+nav a {
+    font-family: var(--font-main);
+    font-size: 0.9em;
+    margin-right: 8px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(143, 116, 140, 0.15);
+    color: var(--heading-color);
+}
+
+strong, b {
+    color: var(--heading-color);
+}
+
+button {
+    margin: 0;
+    cursor: pointer;
+}
+
+time {
+ 	font-family: monospace;
+  	font-style: normal;
+  	font-size: 15px;
+}
+
+table {
+    width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dashed #8F748C;
+    opacity: 0.4;
+}
+
+img {
+    max-width: 100%;
+}
+
+code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+}
+
+blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+}
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+    font-family: var(--font-main);
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+.title {
+    font-family: var(--font-main);
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.title:hover {
+    opacity: 1;
+    color: var(--heading-color);
+    text-decoration: none;
+    cursor: default;
+}
+
+.inline {
+    width: auto !important;
+}
+
+.highlight, .code {
+    padding: 1px 15px;
+    background-color: rgba(255, 240, 150, 0.5);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+}
+
+/* blog post list */
+ul.blog-posts {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.blog-posts li {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e4e8; /* light divider for clarity */
+}
+
+ul.blog-posts li span {
+    font-family: var(--font-main);
+    display: block;
+    font-size: 0.9em;
+    color: #8F748C;
+    margin-bottom: 5px;
+}
+
+ul.blog-posts li a:visited {
+    color: var(--visited-color);
+}
+
+@media (max-width: 600px) {
+  title {
+    font-size: 1.125em
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+  h1 { font-size: 1.825em; }
+  h2 { font-size: 1.75em; }
+  h3 { font-size: 1.5em; }
+  h4 { font-size: 1.25em; }
+  h5 { font-size: 1.125em; }
+  h6 { font-size: 1em; }
+  
+  body {
+    font-size: 1em;
+    line-height: 1.6;
+    padding: 20px;
+  }
+}
